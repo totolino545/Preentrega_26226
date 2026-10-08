@@ -92,4 +92,6 @@ https://dummyjson.com/
 
 ## Autor
 
-Proyecto educativo del curso de Node.js.
+### Juan Adolfo Herrera
+
+Proyecto educativo de la comisión #26226 - del curso deNode.JS.
