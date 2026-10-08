@@ -1,0 +1,19 @@
+
+const url = "https://fakestoreapi/";
+
+export async function products () {
+     try{
+         const response = await fetch(url);
+         
+         if (!response.ok) {
+             throw new Error("Error al obtener los personajes");
+         }    
+         const personajes = await response.json();
+	 return personajes
+       } catch (error) {
+         console.log(error);
+       } finally {
+         console.log("Proceso finalizado");
+       }
+ }
+       
