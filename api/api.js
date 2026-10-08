@@ -1,12 +1,8 @@
-
-export async function products(recurso) {
-
-
-  const url = `https://dummyjson.com/${recurso}`;
-  console.log(url);
+const url = `https://dummyjson.com/`;
+export async function getProducts(recurso, config) {
 
   try {
-    const response = await fetch(url);
+    const response = await fetch(url + recurso, config );
 
     if (!response.ok) {
       if (response.status === 404) {
