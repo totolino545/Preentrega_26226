@@ -42,14 +42,14 @@ switch (metodo) {
         ruta = `${recurso}/add`;
         console.log(`EndPoint :  ${ruta} Datos: ${datos}`);
 
-        const nuevoProducto = { "title": datos[0], "category": datos[1], "price": parseFloat(datos[2]), };
+        const nuevoProducto = { "title": datos[0],  "price": parseFloat(datos[1]), "category": datos[2],};
         config = { ...config, body: JSON.stringify(nuevoProducto), headers: { 'Content-Type': 'application/json' } };
-
+        
         const agregarProducto = await getProducts(ruta, config);
         if (!agregarProducto) {
             console.log("Error al agregar el producto");
         } else {
-            console.log(`Producto agregado correctamente: ${agregarProducto}`);
+            console.log(`Producto agregado correctamente: ${JSON.stringify(nuevoProducto)} `);
 
         }
         break;
